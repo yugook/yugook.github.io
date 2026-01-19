@@ -8,7 +8,7 @@
 
 ## 更新時のメモ
 - `[YOUR_CONTACT_EMAIL]` を実際の連絡先に置き換える
-- 更新日（例: `2026-01-14`）を最新にする
+- 更新日は `_data/legal.yml` の `last_updated` を更新する
 
 ## アクセス方法
 - 公開URL: `https://<username>.github.io/`（入口: `/legal/`）
