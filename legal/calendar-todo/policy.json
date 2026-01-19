@@ -1,0 +1,15 @@
+---
+layout: null
+---
+{
+  "terms": {
+    "version": "{{ site.data.legal.last_updated }}",
+    "url_en": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/calendar-todo/terms/en/",
+    "url_ja": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/calendar-todo/terms/ja/"
+  },
+  "privacy": {
+    "version": "{{ site.data.legal.last_updated }}",
+    "url_en": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/calendar-todo/privacy/en/",
+    "url_ja": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/calendar-todo/privacy/ja/"
+  }
+}

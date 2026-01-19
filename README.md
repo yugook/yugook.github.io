@@ -5,6 +5,7 @@
 - 入口ページ: `legal/index.html`
 - アプリ別ページ: `legal/<app>/terms/<lang>/` と `legal/<app>/privacy/<lang>/`
 - 共通スタイル: `legal/assets/legal.css`
+- 更新通知用JSON: `legal/<app>/policy.json`
 
 ## 更新時のメモ
 - `[YOUR_CONTACT_EMAIL]` を実際の連絡先に置き換える
