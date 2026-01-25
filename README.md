@@ -9,7 +9,7 @@
 
 ## 更新時のメモ
 - 連絡先は `_data/legal.yml` の `contact_email` を更新する
-- 更新日は `_data/legal.yml` の `last_updated` を更新する
+- 更新日は `_data/legal.yml` の `last_updated.terms` / `last_updated.privacy` を更新する
 
 ## アクセス方法
 - 公開URL: `https://<username>.github.io/`（入口: `/legal/`）
