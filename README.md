@@ -8,7 +8,7 @@
 - 更新通知用JSON: `legal/<app>/policy.json`
 
 ## 更新時のメモ
-- `[YOUR_CONTACT_EMAIL]` を実際の連絡先に置き換える
+- 連絡先は `_data/legal.yml` の `contact_email` を更新する
 - 更新日は `_data/legal.yml` の `last_updated` を更新する
 
 ## アクセス方法
