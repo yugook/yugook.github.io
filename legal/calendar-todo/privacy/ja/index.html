@@ -25,10 +25,10 @@ layout: null
           <p class="eyebrow">Calendar Todo</p>
           <h1>プライバシーポリシー</h1>
           <p class="lead">
-            カレンダーToDo（以下「本アプリ」）は、カレンダーを読み取り専用で表示し、イベントを「完了」として記録できるアプリです。本ポリシーでは、本アプリにおける情報の取り扱いを説明します。
+            カレンダーToDo（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、データの透明性を確保します。
           </p>
           <div class="policy-meta">
-            <span>最終更新日: {{ site.data.legal.last_updated }}</span>
+            <span>最終更新日: {{ site.data.legal.last_updated.privacy }}</span>
             <span>言語: 日本語</span>
           </div>
           <div class="links">
@@ -40,51 +40,44 @@ layout: null
         <section class="policy-section reveal delay-2">
           <h2>1. 取得・保存する情報</h2>
           <ul>
-            <li>カレンダー情報: EventKitを通じてイベントのタイトル、日時、カレンダー、識別子等にアクセスし、表示や統計に利用します。カレンダーのイベントは編集しません。</li>
-            <li>完了データ: 完了状態、履歴、診断情報をCore Dataにローカル保存します。</li>
-            <li>iCloud同期（任意）: iCloudを有効にしている場合、上記データはCloudKitのプライベートデータベースに同期されます。</li>
-            <li>保持期間: アプリ削除またはiCloud上の本アプリデータを削除するまで保持されます。</li>
+            <li>カレンダー情報: EventKitを通じてイベントのタイトル、日時、カレンダー名、識別子にアクセスします。これらは表示および統計計算に使用されますが、カレンダー自体の編集は行いません。</li>
+            <li>完了データ: イベントの完了状態、履歴、および診断情報（例: 内部のエラー状態、カレンダーイベントとの再リンク用メタデータ）を、デバイス内のCore Dataに保存します。</li>
+            <li>iCloud同期（任意）: iCloudを有効にしている場合、上記データはAppleのCloudKitを介してユーザー個人のiCloudストレージにのみ同期されます。</li>
+            <li>保持期間（Retention）: データは、アプリの削除またはiCloud上の本アプリデータを削除するまで保持されます。</li>
           </ul>
         </section>
 
         <section class="policy-section reveal delay-3">
           <h2>2. 利用目的</h2>
+          <p>イベントの表示、完了管理、分析統計、および再リンク機能の提供。</p>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>3. 第三者提供とデータ送信</h2>
           <ul>
-            <li>イベント表示、完了管理、分析、再リンクなどの機能提供。</li>
+            <li>サーバー送信の禁止: 当方が運用する外部サーバーへユーザーのデータを送信することはありません。</li>
+            <li>第三者提供: データの販売や広告目的の利用は一切行いません。</li>
+            <li>利用サービス: 同期にはAppleのiCloud/CloudKitを、サブスクリプション管理にはAppleのStoreKitを使用します。</li>
           </ul>
         </section>
 
         <section class="policy-section reveal delay-4">
-          <h2>3. 第三者提供</h2>
+          <h2>4. ユーザーの選択権</h2>
           <ul>
-            <li>データの販売・第三者への提供は行いません。</li>
-            <li>トラッキングや広告目的の利用は行いません。</li>
-            <li>利用するAppleサービス: iCloud/CloudKit（同期）、StoreKit（サブスクリプション）。</li>
+            <li>アクセス権: iOSの設定からいつでもカレンダーへのアクセスを取り消せます。</li>
+            <li>同期: iOSの設定から本アプリのiCloud利用を個別に無効化できます。</li>
+            <li>削除: アプリを削除することでローカルに保存されたデータは削除されます。iCloud上のデータも削除したい場合は、iOSの設定から本アプリのiCloudデータを削除してください（画面名・手順はOSのバージョンにより異なる場合があります）。</li>
           </ul>
         </section>
 
         <section class="policy-section reveal delay-4">
-          <h2>4. サブスクリプションと決済</h2>
-          <p>課金はAppleが処理します。支払い情報は当方に提供されません。</p>
-        </section>
-
-        <section class="policy-section reveal delay-4">
-          <h2>5. ユーザーの選択</h2>
-          <ul>
-            <li>iOSの設定からカレンダーアクセスを取り消せます。</li>
-            <li>iOSの設定から本アプリのiCloud利用を無効化できます。</li>
-            <li>アプリを削除するとローカルデータは削除されます。</li>
-          </ul>
+          <h2>5. セキュリティ</h2>
+          <p>ローカルおよびiCloudに保存されるデータを保護するため、合理的なセキュリティ対策を講じています。</p>
         </section>
 
         <section class="policy-section reveal delay-4">
           <h2>6. お問い合わせ</h2>
           <p>{{ site.data.legal.contact_email }}</p>
-        </section>
-
-        <section class="policy-section reveal delay-4">
-          <h2>7. 本ポリシーの変更</h2>
-          <p>内容を更新する場合があります。最新の内容は公開URLで案内します。</p>
         </section>
       </main>
 

@@ -25,10 +25,10 @@ layout: null
           <p class="eyebrow">Calendar Todo</p>
           <h1>Privacy Policy</h1>
           <p class="lead">
-            Calendar ToDo ("the App") is a read-only calendar viewer that lets you mark events as done. This policy explains how information is handled.
+            Calendar ToDo (the "App") respects your privacy and aims to provide transparency about how data is handled.
           </p>
           <div class="policy-meta">
-            <span>Last updated: {{ site.data.legal.last_updated }}</span>
+            <span>Last updated: {{ site.data.legal.last_updated.privacy }}</span>
             <span>Language: English</span>
           </div>
           <div class="links">
@@ -40,51 +40,44 @@ layout: null
         <section class="policy-section reveal delay-2">
           <h2>1. Information We Access and Store</h2>
           <ul>
-            <li>Calendar data: event titles, dates/times, calendars, and identifiers accessed via EventKit to display events and compute stats. The App does not edit your calendar events.</li>
-            <li>Completion data: done status, history, and diagnostic records stored locally in Core Data.</li>
-            <li>iCloud sync (optional): if iCloud is enabled for the App, the above data is synced to your private iCloud database via CloudKit.</li>
-            <li>Retention: data remains on your device and in iCloud until you delete the App or remove iCloud data for the App.</li>
+            <li>Calendar Data: We access event titles, times, calendar names, and identifiers via EventKit to display events and compute stats. The App does not edit your calendar events.</li>
+            <li>Completion Data: Done status, history, and diagnostic records (e.g., internal error states and relinking metadata) are stored locally on your device via Core Data.</li>
+            <li>iCloud Sync (Optional): If enabled, your data is synced only to your private iCloud storage via Apple CloudKit.</li>
+            <li>Retention: Data remains on your device and in iCloud until you delete the App or remove the App's iCloud data.</li>
           </ul>
         </section>
 
         <section class="policy-section reveal delay-3">
           <h2>2. How We Use Information</h2>
+          <p>To provide core functions such as event display, completion tracking, analytics, and data relinking.</p>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>3. Data Sharing and Transmission</h2>
           <ul>
-            <li>Provide core functionality such as event display, completion tracking, analytics, and relinking.</li>
+            <li>No Developer Server: No data is transmitted to servers operated by us.</li>
+            <li>Third Parties: We do not sell or share your data for tracking or advertising.</li>
+            <li>Apple Services: We use iCloud/CloudKit for sync and StoreKit for subscriptions.</li>
           </ul>
         </section>
 
         <section class="policy-section reveal delay-4">
-          <h2>3. Data Sharing</h2>
-          <ul>
-            <li>We do not sell or share your data with third parties.</li>
-            <li>No tracking or advertising.</li>
-            <li>Apple services used: iCloud/CloudKit for sync and StoreKit for subscriptions.</li>
-          </ul>
-        </section>
-
-        <section class="policy-section reveal delay-4">
-          <h2>4. Subscriptions and Payments</h2>
-          <p>Purchases are processed by Apple. We do not receive your payment information.</p>
-        </section>
-
-        <section class="policy-section reveal delay-4">
-          <h2>5. Your Choices</h2>
+          <h2>4. Your Choices</h2>
           <ul>
             <li>You can revoke Calendar access in iOS Settings.</li>
-            <li>You can disable iCloud for the App in iOS Settings.</li>
-            <li>You can delete the App to remove local data.</li>
+            <li>You can disable iCloud sync for the App in iOS Settings.</li>
+            <li>Deleting the App removes local data. To remove iCloud data, delete the App's iCloud data from iOS Settings (labels and steps may vary by iOS version).</li>
           </ul>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>5. Security</h2>
+          <p>We implement reasonable security measures to protect your data stored locally and in iCloud.</p>
         </section>
 
         <section class="policy-section reveal delay-4">
           <h2>6. Contact</h2>
           <p>{{ site.data.legal.contact_email }}</p>
-        </section>
-
-        <section class="policy-section reveal delay-4">
-          <h2>7. Changes to This Policy</h2>
-          <p>We may update this policy. The latest version will be posted at this URL.</p>
         </section>
       </main>
 
