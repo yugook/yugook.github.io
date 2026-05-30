@@ -3,6 +3,8 @@ layout: null
 ---
 {% assign developer_updated = site.data.legal.last_updated.developer %}
 {% assign calendar_todo_app_store_url = site.data.legal.apps.calendar_todo.app_store_url %}
+{% assign securezip_marketplace_url = site.data.legal.apps.securezip.marketplace_url %}
+{% assign securezip_github_url = site.data.legal.apps.securezip.github_url %}
 {% assign zenn_url = site.data.legal.developer_links.zenn_url %}
 {% assign github_url = site.data.legal.developer_links.github_url %}
 {% assign x_en_url = site.data.legal.developer_links.x_en_url %}
@@ -14,7 +16,7 @@ layout: null
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Developer | Yugo Okugawa</title>
-    <meta name="description" content="Developer information, development policy, and apps by Yugo Okugawa">
+    <meta name="description" content="Developer information, development policy, apps, and extensions by Yugo Okugawa">
     <link rel="stylesheet" href="/legal/assets/legal.css">
   </head>
   <body class="developer-page">
@@ -41,6 +43,7 @@ layout: null
           </div>
           <div class="links support-actions">
             <a href="/calendar-todo/support/en/">Calendar ToDo Support</a>
+            <a href="/securezip/support/en/">SecureZip Support</a>
             <a href="/legal/en/">Legal index</a>
             <a href="/developer/ja/">Japanese version</a>
           </div>
@@ -58,8 +61,8 @@ layout: null
 
         <section class="section reveal delay-3">
           <div class="section-head">
-            <h2>Apps</h2>
-            <p>Published apps and related pages.</p>
+            <h2>Apps and Extensions</h2>
+            <p>Published apps, extensions, and related pages.</p>
           </div>
 
           <div class="card-grid">
@@ -93,6 +96,40 @@ layout: null
                 {% endif %}
               </div>
             </article>
+
+            <article class="card developer-card">
+              <div class="card-top">
+                <h3>SecureZip</h3>
+                <span class="pill">VS Code</span>
+              </div>
+              <p class="card-desc">
+                SecureZip is a Visual Studio Code extension that exports projects as clean ZIP archives. It respects .gitignore and .securezipignore so shared archives are less likely to include unnecessary files or secrets.
+              </p>
+              <p class="card-desc">
+                Processing happens locally, and workspace data is not sent to servers operated by the developer.
+              </p>
+              <dl class="meta">
+                <div>
+                  <dt>Platform</dt>
+                  <dd>Visual Studio Code</dd>
+                </div>
+                <div>
+                  <dt>Policy</dt>
+                  <dd>ZIP archives are created locally</dd>
+                </div>
+              </dl>
+              <div class="links">
+                <a href="/securezip/support/en/">Support</a>
+                <a href="/legal/securezip/terms/en/">Terms</a>
+                <a href="/legal/securezip/privacy/en/">Privacy</a>
+                {% if securezip_marketplace_url and securezip_marketplace_url != blank %}
+                <a href="{{ securezip_marketplace_url }}">Marketplace</a>
+                {% endif %}
+                {% if securezip_github_url and securezip_github_url != blank %}
+                <a href="{{ securezip_github_url }}">GitHub</a>
+                {% endif %}
+              </div>
+            </article>
           </div>
         </section>
 
@@ -104,12 +141,12 @@ layout: null
               <p>The app should support everyday work without adding extra steps.</p>
             </article>
             <article class="support-item">
-              <h3>Respect calendar data</h3>
-              <p>Calendar ToDo treats calendar events as read-only and does not edit or modify the original events.</p>
+              <h3>Respect user data</h3>
+              <p>Calendar ToDo treats calendar events as read-only, and SecureZip processes workspace data locally.</p>
             </article>
             <article class="support-item">
-              <h3>Work naturally with iOS</h3>
-              <p>The app follows iOS platform features such as calendars, notifications, and iCloud.</p>
+              <h3>Work naturally with each platform</h3>
+              <p>The apps follow platform features such as iOS calendars and iCloud, and VS Code workspaces and Git integration.</p>
             </article>
             <article class="support-item">
               <h3>Maintainable over time</h3>
@@ -121,13 +158,14 @@ layout: null
         <section class="policy-section reveal delay-4">
           <h2>Privacy</h2>
           <p>
-            Calendar ToDo is designed to respect your calendar events and avoid handling more data than needed.
+            Calendar ToDo and SecureZip are designed to respect your data and avoid handling more data than needed.
           </p>
           <p>
             For details, please see the Privacy Policy.
           </p>
           <div class="links">
-            <a href="/legal/calendar-todo/privacy/en/">Privacy Policy</a>
+            <a href="/legal/calendar-todo/privacy/en/">Calendar ToDo Privacy Policy</a>
+            <a href="/legal/securezip/privacy/en/">SecureZip Privacy Policy</a>
           </div>
         </section>
 
@@ -162,7 +200,8 @@ layout: null
           </p>
           <div class="links">
             <a href="/calendar-todo/support/en/">Calendar ToDo Support</a>
-            <a href="mailto:{{ site.data.legal.contact_email }}?subject=Calendar%20ToDo%20Support">Email support</a>
+            <a href="/securezip/support/en/">SecureZip Support</a>
+            <a href="mailto:{{ site.data.legal.contact_email }}?subject=Yugo%20Okugawa%20Support">Email support</a>
           </div>
         </section>
       </main>

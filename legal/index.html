@@ -1,26 +1,45 @@
 ---
 layout: null
 ---
-{% assign terms_updated = site.data.legal.last_updated.terms %}
-{% assign privacy_updated = site.data.legal.last_updated.privacy %}
-{% assign support_updated = site.data.legal.last_updated.support %}
-{% if terms_updated > privacy_updated %}
-  {% assign app_updated = terms_updated %}
+{% assign calendar_terms_updated = site.data.legal.last_updated.terms %}
+{% assign calendar_privacy_updated = site.data.legal.last_updated.privacy %}
+{% assign calendar_support_updated = site.data.legal.last_updated.support %}
+{% if calendar_terms_updated > calendar_privacy_updated %}
+  {% assign calendar_todo_updated = calendar_terms_updated %}
 {% else %}
-  {% assign app_updated = privacy_updated %}
+  {% assign calendar_todo_updated = calendar_privacy_updated %}
 {% endif %}
-{% if support_updated %}
-  {% if support_updated > app_updated %}
-    {% assign app_updated = support_updated %}
+{% if calendar_support_updated %}
+  {% if calendar_support_updated > calendar_todo_updated %}
+    {% assign calendar_todo_updated = calendar_support_updated %}
   {% endif %}
 {% endif %}
+{% assign securezip_terms_updated = site.data.legal.last_updated.securezip.terms %}
+{% assign securezip_privacy_updated = site.data.legal.last_updated.securezip.privacy %}
+{% assign securezip_support_updated = site.data.legal.last_updated.securezip.support %}
+{% if securezip_terms_updated > securezip_privacy_updated %}
+  {% assign securezip_updated = securezip_terms_updated %}
+{% else %}
+  {% assign securezip_updated = securezip_privacy_updated %}
+{% endif %}
+{% if securezip_support_updated > securezip_updated %}
+  {% assign securezip_updated = securezip_support_updated %}
+{% endif %}
+{% if calendar_todo_updated > securezip_updated %}
+  {% assign index_updated = calendar_todo_updated %}
+{% else %}
+  {% assign index_updated = securezip_updated %}
+{% endif %}
+{% assign calendar_todo_app_store_url = site.data.legal.apps.calendar_todo.app_store_url %}
+{% assign securezip_marketplace_url = site.data.legal.apps.securezip.marketplace_url %}
+{% assign securezip_github_url = site.data.legal.apps.securezip.github_url %}
 <!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>法的情報 | Yugo Okugawa</title>
-    <meta name="description" content="各アプリの利用規約・プライバシーポリシー一覧">
+    <meta name="description" content="各アプリ・拡張機能のサポート、利用規約、プライバシーポリシー一覧">
     <link rel="stylesheet" href="/legal/assets/legal.css">
   </head>
   <body class="legal-index">
@@ -39,14 +58,14 @@ layout: null
           <p class="eyebrow">法的情報</p>
           <h1>必要なページを選んでください</h1>
           <p class="lead">
-            各アプリの利用規約・プライバシーポリシーをまとめています。最終更新日や対象ストアの情報も確認できます。
+            各アプリ・拡張機能のサポート、利用規約、プライバシーポリシーをまとめています。最終更新日や対象ストアの情報も確認できます。
           </p>
         </section>
 
         <section class="section reveal delay-2">
           <div class="section-head">
-            <h2>アプリ一覧</h2>
-            <p>日本語版の規約・ポリシーへの入口です。</p>
+            <h2>アプリ・拡張機能一覧</h2>
+            <p>日本語版のサポート・規約・ポリシーへの入口です。</p>
           </div>
           <div class="card-grid">
             <article class="card">
@@ -58,7 +77,7 @@ layout: null
               <dl class="meta">
                 <div>
                   <dt>最終更新日</dt>
-                  <dd>{{ app_updated }}</dd>
+                  <dd>{{ calendar_todo_updated }}</dd>
                 </div>
                 <div>
                   <dt>ストア</dt>
@@ -69,6 +88,38 @@ layout: null
                 <a href="/calendar-todo/support/ja/">サポート</a>
                 <a href="/legal/calendar-todo/terms/ja/">利用規約</a>
                 <a href="/legal/calendar-todo/privacy/ja/">プライバシー</a>
+                {% if calendar_todo_app_store_url and calendar_todo_app_store_url != blank %}
+                <a href="{{ calendar_todo_app_store_url }}">App Store</a>
+                {% endif %}
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <h3>SecureZip</h3>
+                <span class="pill">VS Code</span>
+              </div>
+              <p class="card-desc">プロジェクトをクリーンなZIPとしてエクスポートするVisual Studio Code拡張機能。</p>
+              <dl class="meta">
+                <div>
+                  <dt>最終更新日</dt>
+                  <dd>{{ securezip_updated }}</dd>
+                </div>
+                <div>
+                  <dt>ストア</dt>
+                  <dd>VS Code Marketplace</dd>
+                </div>
+              </dl>
+              <div class="links">
+                <a href="/securezip/support/ja/">サポート</a>
+                <a href="/legal/securezip/terms/ja/">利用規約</a>
+                <a href="/legal/securezip/privacy/ja/">プライバシー</a>
+                {% if securezip_marketplace_url and securezip_marketplace_url != blank %}
+                <a href="{{ securezip_marketplace_url }}">Marketplace</a>
+                {% endif %}
+                {% if securezip_github_url and securezip_github_url != blank %}
+                <a href="{{ securezip_github_url }}">GitHub</a>
+                {% endif %}
               </div>
             </article>
           </div>
@@ -79,7 +130,7 @@ layout: null
         <span>Yugo Okugawa</span>
         <span><a href="/developer/ja/">開発者</a></span>
         <span>連絡先: <a href="mailto:{{ site.data.legal.contact_email }}">{{ site.data.legal.contact_email }}</a></span>
-        <span>最終更新日: {{ app_updated }}</span>
+        <span>最終更新日: {{ index_updated }}</span>
       </footer>
     </div>
   </body>
