@@ -265,6 +265,14 @@ main {
   background: transparent;
 }
 
+.developer-page .card-desc {
+  line-height: 1.7;
+}
+
+.developer-page .policy-section .links {
+  margin-top: 16px;
+}
+
 .policy-meta {
   margin-top: 18px;
   display: flex;
@@ -362,6 +370,14 @@ main {
   gap: 16px;
   justify-content: space-between;
   font-size: 14px;
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+.footer a:hover {
+  color: var(--accent);
 }
 
 .reveal {
