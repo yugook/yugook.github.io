@@ -15,7 +15,7 @@ layout: null
       <header class="site-header reveal">
         <div class="brand">Yugo Okugawa Legal</div>
         <nav class="nav-links">
-          <a href="/legal/">Index</a>
+          <a href="/legal/en/">Index</a>
           <a href="/developer/en/">Developer</a>
           <a href="/legal/calendar-todo/privacy/ja/">日本語</a>
         </nav>
@@ -34,7 +34,7 @@ layout: null
           </div>
           <div class="links">
             <a href="/legal/calendar-todo/privacy/ja/">Japanese version</a>
-            <a href="/legal/">Legal index</a>
+            <a href="/legal/en/">Legal index</a>
           </div>
         </section>
 
@@ -78,14 +78,14 @@ layout: null
 
         <section class="policy-section reveal delay-4">
           <h2>6. Contact</h2>
-          <p>{{ site.data.legal.contact_email }}</p>
+          <p><a href="mailto:{{ site.data.legal.contact_email }}">{{ site.data.legal.contact_email }}</a></p>
         </section>
       </main>
 
       <footer class="footer">
         <span>Yugo Okugawa</span>
         <span><a href="/developer/en/">Developer</a></span>
-        <span>Contact: {{ site.data.legal.contact_email }}</span>
+        <span>Contact: <a href="mailto:{{ site.data.legal.contact_email }}">{{ site.data.legal.contact_email }}</a></span>
         <span>Calendar ToDo</span>
       </footer>
     </div>
