@@ -30,7 +30,7 @@ layout: null
         <nav class="nav-links">
           <a href="/legal/en/">English</a>
           <a href="/developer/ja/">開発者</a>
-          <a href="#contact">問い合わせ</a>
+          <a href="#contact">お問い合わせ</a>
         </nav>
       </header>
 
@@ -78,7 +78,7 @@ layout: null
       <footer id="contact" class="footer reveal delay-4">
         <span>Yugo Okugawa</span>
         <span><a href="/developer/ja/">開発者</a></span>
-        <span>連絡先: {{ site.data.legal.contact_email }}</span>
+        <span>連絡先: <a href="mailto:{{ site.data.legal.contact_email }}">{{ site.data.legal.contact_email }}</a></span>
         <span>最終更新日: {{ app_updated }}</span>
       </footer>
     </div>
