@@ -1,0 +1,177 @@
+---
+layout: null
+---
+{% assign developer_updated = site.data.legal.last_updated.developer %}
+{% assign calendar_todo_app_store_url = site.data.legal.apps.calendar_todo.app_store_url %}
+{% assign zenn_url = site.data.legal.developer_links.zenn_url %}
+{% assign github_url = site.data.legal.developer_links.github_url %}
+{% assign x_ja_url = site.data.legal.developer_links.x_ja_url %}
+{% assign note_url = site.data.legal.developer_links.note_url %}
+{% assign devto_url = site.data.legal.developer_links.devto_url %}
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>開発者 | Yugo Okugawa</title>
+    <meta name="description" content="Yugo Okugawaの開発者情報、開発方針、提供アプリの一覧">
+    <link rel="stylesheet" href="/legal/assets/legal.css">
+  </head>
+  <body class="developer-page">
+    <div class="container">
+      <header class="site-header reveal">
+        <div class="brand">Yugo Okugawa</div>
+        <nav class="nav-links">
+          <a href="/legal/">法的情報</a>
+          <a href="/developer/en/">English</a>
+          <a href="#contact">問い合わせ</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="policy-hero reveal delay-1">
+          <p class="eyebrow">開発者</p>
+          <h1>Yugo Okugawa</h1>
+          <p class="lead">
+            個人開発者 / Indie App Developer。日々使う小さなツールを、シンプルに長く使える形で作っています。
+          </p>
+          <div class="policy-meta">
+            <span>最終更新日: {{ developer_updated }}</span>
+            <span>言語: 日本語</span>
+          </div>
+          <div class="links support-actions">
+            <a href="/calendar-todo/support/ja/">カレンダーToDo サポート</a>
+            <a href="/legal/">法的情報一覧</a>
+            <a href="/developer/en/">英語版</a>
+          </div>
+        </section>
+
+        <section class="policy-section reveal delay-2">
+          <h2>開発者について</h2>
+          <p>
+            このページでは、開発者の自己紹介というよりも、アプリを誰が、どのような方針で作っているかをまとめています。
+          </p>
+          <p>
+            Yugo Okugawa は、日常で繰り返し使う道具を、シンプルに、長く使える形で開発している個人開発者です。アプリを大きく複雑にすることよりも、毎日使う中で迷わず操作できること、必要な情報が自然に残ること、長く安心して使えることを大切にしています。
+          </p>
+        </section>
+
+        <section class="section reveal delay-3">
+          <div class="section-head">
+            <h2>アプリ</h2>
+            <p>公開しているアプリと関連ページです。</p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card developer-card">
+              <div class="card-top">
+                <h3>カレンダーToDo / Calendar ToDo</h3>
+                <span class="pill">iOS</span>
+              </div>
+              <p class="card-desc">
+                カレンダー予定を読み取り、完了や振り返りを記録するためのiOSアプリです。既存のカレンダーを置き換えるのではなく、予定の実行結果をあとから振り返るための補助ツールとして作っています。
+              </p>
+              <p class="card-desc">
+                元のカレンダー予定は変更せず、完了状態や振り返りはアプリ内のデータとして記録します。
+              </p>
+              <dl class="meta">
+                <div>
+                  <dt>プラットフォーム</dt>
+                  <dd>iOS</dd>
+                </div>
+                <div>
+                  <dt>方針</dt>
+                  <dd>元のカレンダー予定は変更しません</dd>
+                </div>
+              </dl>
+              <div class="links">
+                <a href="/calendar-todo/support/ja/">サポート</a>
+                <a href="/legal/calendar-todo/terms/ja/">利用規約</a>
+                <a href="/legal/calendar-todo/privacy/ja/">プライバシーポリシー</a>
+                {% if calendar_todo_app_store_url and calendar_todo_app_store_url != blank %}
+                <a href="{{ calendar_todo_app_store_url }}">App Store</a>
+                {% endif %}
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>開発方針</h2>
+          <div class="support-grid">
+            <article class="support-item">
+              <h3>シンプルに使えること</h3>
+              <p>日々の作業を増やさず、必要な操作が迷わずできることを重視しています。</p>
+            </article>
+            <article class="support-item">
+              <h3>カレンダーデータを尊重すること</h3>
+              <p>Calendar ToDo はカレンダー予定を読み取り専用で扱い、元の予定を編集・変更しません。</p>
+            </article>
+            <article class="support-item">
+              <h3>iOS標準機能と自然に連携すること</h3>
+              <p>カレンダー、通知、iCloudなど、iOSの標準機能に沿った使い方を大切にしています。</p>
+            </article>
+            <article class="support-item">
+              <h3>長く使える形でメンテナンスすること</h3>
+              <p>大きな約束ではなく、必要な修正と改善を継続しやすい設計を心がけています。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>プライバシーへの姿勢</h2>
+          <p>
+            Calendar ToDo は、ユーザーのカレンダー予定を尊重し、必要以上にデータを扱わない設計を大切にしています。
+          </p>
+          <p>
+            詳しいデータの扱いについては、プライバシーポリシーをご確認ください。
+          </p>
+          <div class="links">
+            <a href="/legal/calendar-todo/privacy/ja/">プライバシーポリシー</a>
+          </div>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>技術記事・開発記録</h2>
+          <p>
+            開発で学んだことや、アプリ改善の過程を技術記事として公開しています。アプリの使い方だけでなく、開発の背景や実装で考えたことも少しずつ記録しています。
+          </p>
+          <div class="links">
+            {% if zenn_url and zenn_url != blank %}
+            <a href="{{ zenn_url }}">Zenn - 技術記事</a>
+            {% endif %}
+            {% if github_url and github_url != blank %}
+            <a href="{{ github_url }}">GitHub - 公開リポジトリ</a>
+            {% endif %}
+            {% if x_ja_url and x_ja_url != blank %}
+            <a href="{{ x_ja_url }}">X - お知らせ</a>
+            {% endif %}
+            {% if note_url and note_url != blank %}
+            <a href="{{ note_url }}">note - 開発記録</a>
+            {% endif %}
+            {% if devto_url and devto_url != blank %}
+            <a href="{{ devto_url }}">dev.to - 技術記事</a>
+            {% endif %}
+          </div>
+        </section>
+
+        <section id="contact" class="policy-section reveal delay-4">
+          <h2>問い合わせ</h2>
+          <p>
+            アプリに関するお問い合わせは、各アプリのサポートページからお願いします。サポートページには、不具合報告や問い合わせ時にあると助かる情報をまとめています。
+          </p>
+          <div class="links">
+            <a href="/calendar-todo/support/ja/">カレンダーToDo サポート</a>
+            <a href="mailto:{{ site.data.legal.contact_email }}?subject=Calendar%20ToDo%20Support">メールで問い合わせる</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Yugo Okugawa</span>
+        <span>連絡先: {{ site.data.legal.contact_email }}</span>
+        <span><a href="/developer/en/">English</a></span>
+      </footer>
+    </div>
+  </body>
+</html>
