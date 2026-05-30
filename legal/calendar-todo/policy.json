@@ -11,5 +11,10 @@ layout: null
     "version": "{{ site.data.legal.last_updated.privacy }}",
     "url_en": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/calendar-todo/privacy/en/",
     "url_ja": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/calendar-todo/privacy/ja/"
+  },
+  "support": {
+    "version": "{{ site.data.legal.last_updated.support }}",
+    "url_en": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/calendar-todo/support/en/",
+    "url_ja": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/calendar-todo/support/ja/"
   }
 }

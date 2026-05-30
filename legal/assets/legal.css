@@ -298,6 +298,60 @@ main {
   color: var(--muted);
 }
 
+.support-actions {
+  margin-top: 18px;
+}
+
+.support-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 16px;
+}
+
+.support-item {
+  border: 1px solid var(--outline);
+  border-radius: 14px;
+  padding: 16px;
+  background: rgba(255, 248, 238, 0.72);
+}
+
+.support-item h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.support-item p {
+  margin: 0;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.faq-list details {
+  border: 1px solid var(--outline);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: rgba(255, 248, 238, 0.72);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.faq-list details p,
+.faq-list details ul {
+  margin-top: 10px;
+}
+
+.contact-list li + li {
+  margin-top: 8px;
+}
+
 .footer {
   margin-top: 64px;
   padding-top: 24px;
