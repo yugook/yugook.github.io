@@ -22,8 +22,10 @@ layout: null
 {% else %}
   {% assign securezip_updated = securezip_privacy_updated %}
 {% endif %}
-{% if securezip_support_updated > securezip_updated %}
-  {% assign securezip_updated = securezip_support_updated %}
+{% if securezip_support_updated %}
+  {% if securezip_support_updated > securezip_updated %}
+    {% assign securezip_updated = securezip_support_updated %}
+  {% endif %}
 {% endif %}
 {% if calendar_todo_updated > securezip_updated %}
   {% assign index_updated = calendar_todo_updated %}
