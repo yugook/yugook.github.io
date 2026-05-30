@@ -135,28 +135,6 @@ main {
   color: var(--muted);
 }
 
-.lang-toggle {
-  margin-top: 18px;
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.lang-toggle a {
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--outline);
-  color: var(--ink);
-  background: #fff;
-  font-size: 13px;
-}
-
-.lang-toggle a.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
-}
-
 .section {
   margin-top: 56px;
 }
@@ -259,10 +237,6 @@ main {
   background: #fff;
   font-size: 13px;
   color: var(--ink);
-}
-
-.links.secondary a {
-  background: transparent;
 }
 
 .developer-page .card-desc {

@@ -3,7 +3,7 @@
 
 ## 構成
 - 開発者ページ: `developer/ja/index.html` と `developer/en/index.html`
-- 入口ページ: `legal/index.html`
+- 入口ページ: `legal/index.html` と `legal/en/index.html`
 - サポートページ: `<app>/support/<lang>/`
 - 法務ページ: `legal/<app>/terms/<lang>/` と `legal/<app>/privacy/<lang>/`
 - 共通スタイル: `legal/assets/legal.css`
@@ -16,5 +16,5 @@
 - App Store URL は `_data/legal.yml` の `apps.<app>.app_store_url` に設定する
 
 ## アクセス方法
-- 公開URL: `https://<username>.github.io/`（入口: `/legal/`、開発者ページ: `/developer/ja/` と `/developer/en/`）
+- 公開URL: `https://<username>.github.io/`（入口: `/legal/` と `/legal/en/`、開発者ページ: `/developer/ja/` と `/developer/en/`）
 - 実際のURLは GitHub の Settings → Pages で確認
