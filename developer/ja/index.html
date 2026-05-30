@@ -22,9 +22,9 @@ layout: null
       <header class="site-header reveal">
         <div class="brand">Yugo Okugawa</div>
         <nav class="nav-links">
-          <a href="/legal/">Legal</a>
+          <a href="/legal/">法的情報</a>
           <a href="/developer/en/">English</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact">問い合わせ</a>
         </nav>
       </header>
 
@@ -41,8 +41,8 @@ layout: null
           </div>
           <div class="links support-actions">
             <a href="/calendar-todo/support/ja/">カレンダーToDo サポート</a>
-            <a href="/legal/">Legal index</a>
-            <a href="/developer/en/">English version</a>
+            <a href="/legal/">法的情報一覧</a>
+            <a href="/developer/en/">英語版</a>
           </div>
         </section>
 
@@ -58,7 +58,7 @@ layout: null
 
         <section class="section reveal delay-3">
           <div class="section-head">
-            <h2>Apps</h2>
+            <h2>アプリ</h2>
             <p>公開しているアプリと関連ページです。</p>
           </div>
 
@@ -76,18 +76,18 @@ layout: null
               </p>
               <dl class="meta">
                 <div>
-                  <dt>Platform</dt>
+                  <dt>プラットフォーム</dt>
                   <dd>iOS</dd>
                 </div>
                 <div>
-                  <dt>Policy</dt>
-                  <dd>Original calendar events are not modified</dd>
+                  <dt>方針</dt>
+                  <dd>元のカレンダー予定は変更しません</dd>
                 </div>
               </dl>
               <div class="links">
-                <a href="/calendar-todo/support/ja/">Support</a>
-                <a href="/legal/calendar-todo/terms/ja/">Terms</a>
-                <a href="/legal/calendar-todo/privacy/ja/">Privacy</a>
+                <a href="/calendar-todo/support/ja/">サポート</a>
+                <a href="/legal/calendar-todo/terms/ja/">利用規約</a>
+                <a href="/legal/calendar-todo/privacy/ja/">プライバシーポリシー</a>
                 {% if calendar_todo_app_store_url and calendar_todo_app_store_url != blank %}
                 <a href="{{ calendar_todo_app_store_url }}">App Store</a>
                 {% endif %}
@@ -150,7 +150,7 @@ layout: null
             <a href="{{ note_url }}">note - 開発記録</a>
             {% endif %}
             {% if devto_url and devto_url != blank %}
-            <a href="{{ devto_url }}">dev.to - Technical Articles</a>
+            <a href="{{ devto_url }}">dev.to - 技術記事</a>
             {% endif %}
           </div>
         </section>
@@ -169,7 +169,7 @@ layout: null
 
       <footer class="footer">
         <span>Yugo Okugawa</span>
-        <span>Contact: {{ site.data.legal.contact_email }}</span>
+        <span>連絡先: {{ site.data.legal.contact_email }}</span>
         <span><a href="/developer/en/">English</a></span>
       </footer>
     </div>
