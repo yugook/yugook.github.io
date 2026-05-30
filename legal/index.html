@@ -9,8 +9,10 @@ layout: null
 {% else %}
   {% assign app_updated = privacy_updated %}
 {% endif %}
-{% if support_updated > app_updated %}
-  {% assign app_updated = support_updated %}
+{% if support_updated %}
+  {% if support_updated > app_updated %}
+    {% assign app_updated = support_updated %}
+  {% endif %}
 {% endif %}
 <!doctype html>
 <html lang="ja">
