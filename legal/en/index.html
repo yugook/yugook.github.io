@@ -1,26 +1,47 @@
 ---
 layout: null
 ---
-{% assign terms_updated = site.data.legal.last_updated.terms %}
-{% assign privacy_updated = site.data.legal.last_updated.privacy %}
-{% assign support_updated = site.data.legal.last_updated.support %}
-{% if terms_updated > privacy_updated %}
-  {% assign app_updated = terms_updated %}
+{% assign calendar_terms_updated = site.data.legal.last_updated.terms %}
+{% assign calendar_privacy_updated = site.data.legal.last_updated.privacy %}
+{% assign calendar_support_updated = site.data.legal.last_updated.support %}
+{% if calendar_terms_updated > calendar_privacy_updated %}
+  {% assign calendar_todo_updated = calendar_terms_updated %}
 {% else %}
-  {% assign app_updated = privacy_updated %}
+  {% assign calendar_todo_updated = calendar_privacy_updated %}
 {% endif %}
-{% if support_updated %}
-  {% if support_updated > app_updated %}
-    {% assign app_updated = support_updated %}
+{% if calendar_support_updated %}
+  {% if calendar_support_updated > calendar_todo_updated %}
+    {% assign calendar_todo_updated = calendar_support_updated %}
   {% endif %}
 {% endif %}
+{% assign securezip_terms_updated = site.data.legal.last_updated.securezip.terms %}
+{% assign securezip_privacy_updated = site.data.legal.last_updated.securezip.privacy %}
+{% assign securezip_support_updated = site.data.legal.last_updated.securezip.support %}
+{% if securezip_terms_updated > securezip_privacy_updated %}
+  {% assign securezip_updated = securezip_terms_updated %}
+{% else %}
+  {% assign securezip_updated = securezip_privacy_updated %}
+{% endif %}
+{% if securezip_support_updated %}
+  {% if securezip_support_updated > securezip_updated %}
+    {% assign securezip_updated = securezip_support_updated %}
+  {% endif %}
+{% endif %}
+{% if calendar_todo_updated > securezip_updated %}
+  {% assign index_updated = calendar_todo_updated %}
+{% else %}
+  {% assign index_updated = securezip_updated %}
+{% endif %}
+{% assign calendar_todo_app_store_url = site.data.legal.apps.calendar_todo.app_store_url %}
+{% assign securezip_marketplace_url = site.data.legal.apps.securezip.marketplace_url %}
+{% assign securezip_github_url = site.data.legal.apps.securezip.github_url %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Legal | Yugo Okugawa</title>
-    <meta name="description" content="Terms, privacy policies, and support pages for Yugo Okugawa apps">
+    <meta name="description" content="Support pages, terms, and privacy policies for Yugo Okugawa apps and extensions">
     <link rel="stylesheet" href="/legal/assets/legal.css">
   </head>
   <body class="legal-index">
@@ -39,13 +60,13 @@ layout: null
           <p class="eyebrow">Legal</p>
           <h1>Which page do you need?</h1>
           <p class="lead">
-            Find terms, privacy policies, and support pages for each app. You can also check the latest update date and store information.
+            Find support pages, terms, and privacy policies for each app and extension. You can also check the latest update date and store information.
           </p>
         </section>
 
         <section class="section reveal delay-2">
           <div class="section-head">
-            <h2>Apps</h2>
+            <h2>Apps and Extensions</h2>
             <p>Shortcuts to the English support and legal pages.</p>
           </div>
           <div class="card-grid">
@@ -58,7 +79,7 @@ layout: null
               <dl class="meta">
                 <div>
                   <dt>Last updated</dt>
-                  <dd>{{ app_updated }}</dd>
+                  <dd>{{ calendar_todo_updated }}</dd>
                 </div>
                 <div>
                   <dt>Store</dt>
@@ -69,6 +90,38 @@ layout: null
                 <a href="/calendar-todo/support/en/">Support</a>
                 <a href="/legal/calendar-todo/terms/en/">Terms</a>
                 <a href="/legal/calendar-todo/privacy/en/">Privacy</a>
+                {% if calendar_todo_app_store_url and calendar_todo_app_store_url != blank %}
+                <a href="{{ calendar_todo_app_store_url }}">App Store</a>
+                {% endif %}
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <h3>SecureZip</h3>
+                <span class="pill">VS Code</span>
+              </div>
+              <p class="card-desc">A Visual Studio Code extension for exporting projects as clean ZIP archives.</p>
+              <dl class="meta">
+                <div>
+                  <dt>Last updated</dt>
+                  <dd>{{ securezip_updated }}</dd>
+                </div>
+                <div>
+                  <dt>Store</dt>
+                  <dd>VS Code Marketplace</dd>
+                </div>
+              </dl>
+              <div class="links">
+                <a href="/securezip/support/en/">Support</a>
+                <a href="/legal/securezip/terms/en/">Terms</a>
+                <a href="/legal/securezip/privacy/en/">Privacy</a>
+                {% if securezip_marketplace_url and securezip_marketplace_url != blank %}
+                <a href="{{ securezip_marketplace_url }}">Marketplace</a>
+                {% endif %}
+                {% if securezip_github_url and securezip_github_url != blank %}
+                <a href="{{ securezip_github_url }}">GitHub</a>
+                {% endif %}
               </div>
             </article>
           </div>
@@ -79,7 +132,7 @@ layout: null
         <span>Yugo Okugawa</span>
         <span><a href="/developer/en/">Developer</a></span>
         <span>Contact: <a href="mailto:{{ site.data.legal.contact_email }}">{{ site.data.legal.contact_email }}</a></span>
-        <span>Last updated: {{ app_updated }}</span>
+        <span>Last updated: {{ index_updated }}</span>
       </footer>
     </div>
   </body>

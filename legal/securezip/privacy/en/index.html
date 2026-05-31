@@ -1,0 +1,93 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SecureZip Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for SecureZip">
+    <link rel="stylesheet" href="/legal/assets/legal.css">
+  </head>
+  <body class="policy-page">
+    <div class="container">
+      <header class="site-header reveal">
+        <div class="brand">Yugo Okugawa Legal</div>
+        <nav class="nav-links">
+          <a href="/legal/en/">Index</a>
+          <a href="/developer/en/">Developer</a>
+          <a href="/legal/securezip/privacy/ja/">日本語</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="policy-hero reveal delay-1">
+          <p class="eyebrow">SecureZip</p>
+          <h1>Privacy Policy</h1>
+          <p class="lead">
+            SecureZip (the "Extension") handles workspace information only as needed to create ZIP archives within Visual Studio Code.
+          </p>
+          <div class="policy-meta">
+            <span>Last updated: {{ site.data.legal.last_updated.securezip.privacy }}</span>
+            <span>Language: English</span>
+          </div>
+          <div class="links">
+            <a href="/legal/securezip/privacy/ja/">Japanese version</a>
+            <a href="/legal/en/">Legal index</a>
+          </div>
+        </section>
+
+        <section class="policy-section reveal delay-2">
+          <h2>1. Information We Access and Use</h2>
+          <ul>
+            <li>Workspace Data: To create ZIP archives, the Extension locally accesses file names, paths, and file contents inside the selected folder or workspace.</li>
+            <li>Ignore Rules: The Extension reads .gitignore, .securezipignore, and automatic exclusion rules to decide which files are included.</li>
+            <li>Git Data: If you use auto-commit or tagging, the Extension may read or update local Git repository status, commits, and tags.</li>
+            <li>Extension Settings: The Extension uses SecureZip settings stored in Visual Studio Code settings.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section reveal delay-3">
+          <h2>2. How We Use Information</h2>
+          <p>Information is used to provide Extension features such as archive creation, ignore rule handling, previews, auto-commit, and tagging.</p>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>3. Data Transmission and Sharing</h2>
+          <ul>
+            <li>No Developer Server: The Extension does not send workspace data to servers operated by the developer.</li>
+            <li>No Advertising or Tracking: We do not sell data or use it for advertising tracking.</li>
+            <li>Platform Services: Data handling by Visual Studio Code, VS Code Marketplace, Git, or other tools in your environment is governed by those providers' terms.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>4. Storage and Deletion</h2>
+          <ul>
+            <li>Created ZIP archives are saved to the destination selected by the user.</li>
+            <li>Git commits or tags are recorded in the local Git repository only when you use those features.</li>
+            <li>You can delete or change ZIP files, settings, and Git history in your own environment.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>5. Security</h2>
+          <p>The Extension performs archive creation locally and is designed to avoid handling more workspace data than needed.</p>
+        </section>
+
+        <section class="policy-section reveal delay-4">
+          <h2>6. Contact</h2>
+          <p><a href="mailto:{{ site.data.legal.contact_email }}">{{ site.data.legal.contact_email }}</a></p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Yugo Okugawa</span>
+        <span><a href="/developer/en/">Developer</a></span>
+        <span>Contact: <a href="mailto:{{ site.data.legal.contact_email }}">{{ site.data.legal.contact_email }}</a></span>
+        <span>SecureZip</span>
+      </footer>
+    </div>
+  </body>
+</html>

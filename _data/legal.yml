@@ -3,6 +3,10 @@ last_updated:
   privacy: 2026-01-26
   support: 2026-05-31
   developer: 2026-05-31
+  securezip:
+    terms: 2026-05-31
+    privacy: 2026-05-31
+    support: 2026-05-31
 contact_email: yugo.work.contact@gmail.com
 developer_links:
   zenn_url: https://zenn.dev/okyugog
@@ -14,3 +18,6 @@ developer_links:
 apps:
   calendar_todo:
     app_store_url: https://apps.apple.com/us/app/calendar-todo/id6756511434
+  securezip:
+    marketplace_url: https://marketplace.visualstudio.com/items?itemName=yugook.securezip
+    github_url: https://github.com/yugook/SecureZip

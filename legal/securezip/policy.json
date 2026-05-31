@@ -1,0 +1,20 @@
+---
+layout: null
+---
+{
+  "terms": {
+    "version": "{{ site.data.legal.last_updated.securezip.terms }}",
+    "url_en": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/securezip/terms/en/",
+    "url_ja": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/securezip/terms/ja/"
+  },
+  "privacy": {
+    "version": "{{ site.data.legal.last_updated.securezip.privacy }}",
+    "url_en": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/securezip/privacy/en/",
+    "url_ja": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/legal/securezip/privacy/ja/"
+  },
+  "support": {
+    "version": "{{ site.data.legal.last_updated.securezip.support }}",
+    "url_en": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/securezip/support/en/",
+    "url_ja": "{{ site.url | default: site.github.url }}{{ site.baseurl | default: site.github.baseurl }}/securezip/support/ja/"
+  }
+}
