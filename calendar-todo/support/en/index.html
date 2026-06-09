@@ -59,11 +59,56 @@ layout: null
         </section>
 
         <section class="policy-section reveal delay-3">
+          <h2>Show Google Calendar or Outlook Events Through iOS Calendar</h2>
+          <p>
+            Calendar ToDo does not sign in to Google Calendar or Outlook directly. It reads events that are synced to the built-in iOS Calendar app.
+            To show Google Calendar or Outlook events, first enable calendar sync for that account in iOS Settings.
+          </p>
+          <ol>
+            <li>Add your Google or Outlook account in iOS Settings.</li>
+            <li>Enable calendar sync for that account.</li>
+            <li>Confirm that the events appear in the built-in iOS Calendar app.</li>
+            <li>Allow Calendar access for Calendar ToDo.</li>
+            <li>Check that the target calendar is not hidden in Calendar ToDo.</li>
+          </ol>
+          <p>Setting names and steps may vary depending on your iOS version and account type.</p>
+          <h3>Related Official Help</h3>
+          <p>For detailed setup steps, please refer to the official help pages from Apple, Google, or Microsoft.</p>
+          <div class="links">
+            <a href="https://support.apple.com/guide/iphone/ipha0d932e96/ios">Apple: Set up calendar accounts on iPhone</a>
+            <a href="https://support.google.com/calendar/answer/99358?co=GENIE.Platform%3DiOS&hl=en">Google: Add Google Calendar to Apple Calendar</a>
+            <a href="https://support.microsoft.com/en-us/office/connect-outlook-and-apple-iphone-calendars-be7a12eb-fe76-4346-ae13-b54249db7f9c">Microsoft: Connect Outlook and Apple iPhone calendars</a>
+          </div>
+        </section>
+
+        <section class="policy-section reveal delay-4">
           <h2>FAQ</h2>
           <div class="faq-list">
             <details>
               <summary>My calendar events are not displayed.</summary>
               <p>Allow Calendar access for Calendar ToDo in iOS Settings. If events still do not appear, restart the app and confirm that the target calendar is not hidden.</p>
+            </details>
+
+            <details>
+              <summary>Can I show Google Calendar or Outlook events?</summary>
+              <p>Yes. Calendar ToDo can show Google Calendar or Outlook events when they are synced to the built-in iOS Calendar app. Calendar ToDo does not sign in to Google Calendar or Outlook directly.</p>
+            </details>
+
+            <details>
+              <summary>Google Calendar or Outlook events are not displayed.</summary>
+              <p>First, confirm that the events appear in the built-in iOS Calendar app. If they do not appear there, check that calendar sync is enabled for your Google or Outlook account in iOS Settings. If the events appear in the built-in Calendar app but not in Calendar ToDo, check Calendar access and the visible calendars in Calendar ToDo.</p>
+            </details>
+
+            <details>
+              <summary>Are per-event colors from Google Calendar or Outlook shown?</summary>
+              <p>Calendar ToDo shows the color of the calendar that each event belongs to. Per-event colors, such as Google Calendar color labels or Outlook category colors, are not available in Calendar ToDo through the built-in iOS Calendar system.</p>
+              <p>If you want to organize events by color, we recommend creating separate calendars for different purposes instead of using per-event colors.</p>
+              <p>Related official help:</p>
+              <ul>
+                <li><a href="https://support.apple.com/guide/iphone/iph3d1110d4/ios">Apple: Set up multiple calendars on iPhone</a></li>
+                <li><a href="https://support.google.com/calendar/answer/37095?hl=en">Google: Create a new calendar</a></li>
+                <li><a href="https://support.google.com/calendar/answer/12377581?hl=en">Google: Use color labels to track calendar entries</a></li>
+              </ul>
             </details>
 
             <details>
@@ -95,7 +140,8 @@ layout: null
             <li>Review Calendar access, notification settings, and iCloud settings in iOS Settings.</li>
             <li>Quit and reopen the app.</li>
             <li>Restart your device.</li>
-            <li>If only a specific calendar is missing, check whether that calendar is enabled in the Calendar app.</li>
+            <li>If only a specific calendar is missing, check whether that calendar is enabled in the built-in iOS Calendar app.</li>
+            <li>If Google Calendar or Outlook events are missing, confirm that calendar sync is enabled for that account in iOS Settings.</li>
           </ul>
         </section>
 
