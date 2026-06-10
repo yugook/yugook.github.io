@@ -41,14 +41,15 @@ layout: null
         </section>
 
         <section class="policy-section reveal delay-2">
-          <h2>はじめに確認すること</h2>
+          <h2>基本設定の確認</h2>
+          <p>予定の表示、通知、同期に関係する代表的な設定です。問題がある場合は、以下の項目が手がかりになります。</p>
           <div class="support-grid">
             <article class="support-item">
-              <h3>カレンダー権限</h3>
+              <h3>カレンダーアクセス</h3>
               <p>iOSの設定で、カレンダーToDoにカレンダーへのアクセスが許可されているか確認してください。</p>
             </article>
             <article class="support-item">
-              <h3>通知設定</h3>
+              <h3>通知</h3>
               <p>通知を利用する場合は、iOSの通知設定と集中モードの状態を確認してください。</p>
             </article>
             <article class="support-item">
@@ -59,11 +60,62 @@ layout: null
         </section>
 
         <section class="policy-section reveal delay-3">
+          <h2>外部カレンダーの表示について</h2>
+          <p>
+            カレンダーToDoはGoogleカレンダーやOutlookに直接ログインするのではなく、iOS標準のカレンダーアプリに同期されている予定を読み取って表示します。
+            GoogleカレンダーやOutlookの予定を表示するには、iOS側で対象アカウントのカレンダー同期が有効になっている必要があります。
+          </p>
+          <ol>
+            <li>iOSの「設定」でGoogleまたはOutlookのアカウントを追加します。</li>
+            <li>対象アカウントのカレンダー同期を有効にします。</li>
+            <li>iOS標準のカレンダーアプリで予定が表示されることを確認します。</li>
+            <li>カレンダーToDoにカレンダーアクセスを許可します。</li>
+            <li>カレンダーToDo内で対象カレンダーが非表示になっていないか確認します。</li>
+          </ol>
+          <p>設定画面の名称や手順は、iOSのバージョンやアカウントの種類により異なる場合があります。</p>
+          <h3>関連する公式ヘルプ</h3>
+          <p>詳しい設定手順は、Apple、Google、Microsoftの公式ヘルプもあわせて確認してください。</p>
+          <div class="links">
+            <a href="https://support.apple.com/ja-jp/guide/iphone/ipha0d932e96/ios">Apple: iPhoneでカレンダーアカウントを設定する</a>
+            <a href="https://support.google.com/calendar/answer/99358?co=GENIE.Platform%3DiOS&hl=ja">Google: GoogleカレンダーをAppleカレンダーに追加する</a>
+            <a href="https://support.microsoft.com/en-us/office/connect-outlook-and-apple-iphone-calendars-be7a12eb-fe76-4346-ae13-b54249db7f9c">Microsoft: OutlookとiPhoneカレンダーを接続する</a>
+          </div>
+        </section>
+
+        <section class="policy-section reveal delay-4">
           <h2>よくある質問</h2>
           <div class="faq-list">
             <details>
               <summary>カレンダーの予定が表示されません。</summary>
               <p>iOSの「設定」からカレンダーToDoのカレンダーアクセスを許可してください。許可後も表示されない場合は、アプリを再起動し、対象のカレンダーが非表示になっていないか確認してください。</p>
+            </details>
+
+            <details>
+              <summary>GoogleカレンダーやOutlookの予定を表示できますか。</summary>
+              <p>はい。GoogleカレンダーやOutlookの予定は、iOS標準のカレンダーアプリに同期されていればカレンダーToDoで表示できます。カレンダーToDoがGoogleカレンダーやOutlookへ直接ログインすることはありません。</p>
+            </details>
+
+            <details>
+              <summary>GoogleカレンダーやOutlookの予定が表示されません。</summary>
+              <p>まずiOS標準のカレンダーアプリで対象の予定が表示されるか確認してください。表示されない場合は、iOS側でGoogleまたはOutlookアカウントのカレンダー同期が有効になっているか確認してください。iOS標準のカレンダーアプリでは表示されるのにカレンダーToDoで表示されない場合は、カレンダーToDoのカレンダーアクセスと表示対象カレンダーを確認してください。</p>
+            </details>
+
+            <details>
+              <summary>GoogleカレンダーやOutlookで設定した予定ごとの色は表示されますか。</summary>
+              <p>カレンダーToDoでは、予定が所属するカレンダーごとの色を表示します。Googleカレンダーの色ラベルやOutlookのカテゴリ色など、予定ごとに設定した色は、iOS標準のカレンダーアプリ経由ではカレンダーToDoに反映されません。</p>
+              <p>予定を色分けして管理したい場合は、予定ごとの色ではなく、用途ごとにカレンダーを分けることをおすすめします。</p>
+              <p>関連する公式ヘルプ:</p>
+              <ul>
+                <li><a href="https://support.apple.com/ja-jp/guide/iphone/iph3d1110d4/ios">Apple: iPhoneで複数のカレンダーを設定する</a></li>
+                <li><a href="https://support.google.com/calendar/answer/37095?hl=ja">Google: 新しいカレンダーを作成する</a></li>
+                <li><a href="https://support.google.com/calendar/answer/12377581?hl=ja">Google: 色ラベルを使用してカレンダーの予定を管理する</a></li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>カレンダーの予定を編集できますか。</summary>
+              <p>カレンダーToDoでは、元のカレンダー予定のタイトル、時刻、場所、メモなどは編集できません。予定は読み取り専用で表示され、完了状態や振り返りの記録はカレンダーToDo内のデータとして保存されます。</p>
+              <p>予定そのものを変更したい場合は、iOS標準のカレンダーアプリ、Googleカレンダー、Outlookなど、予定を作成したカレンダー側で編集してください。</p>
             </details>
 
             <details>
@@ -95,7 +147,8 @@ layout: null
             <li>iOSの設定でカレンダー権限、通知設定、iCloud設定を確認してください。</li>
             <li>アプリを終了して再起動してください。</li>
             <li>端末を再起動してください。</li>
-            <li>特定のカレンダーだけ表示されない場合は、カレンダーアプリ側で対象カレンダーが有効か確認してください。</li>
+            <li>特定のカレンダーだけ表示されない場合は、iOS標準のカレンダーアプリ側で対象カレンダーが有効か確認してください。</li>
+            <li>GoogleカレンダーやOutlookの予定が表示されない場合は、iOS側で対象アカウントのカレンダー同期が有効か確認してください。</li>
           </ul>
         </section>
 
